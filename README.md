@@ -7,6 +7,7 @@ Place this script into a folder that is the parent of subfolders containing git 
 For auto-upgrade functionality, also create a script (or symlink to the repo's included install script if it exists), making sure it shares a name with the folder in which the git repo it will run for is. Example: For a local clone living in rootfolder/foo/bar, create a script in rootfolder/foo (or place a symlink to the repo's install script in rootfolder/foo/bar) named bar.sh.
 
 Program arguments:
+
 --update: Also fast forward local clones to be up to date with remote.
 
 --upgrade: Also run the install scripts for all local clones.
