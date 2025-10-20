@@ -1,8 +1,6 @@
 #!/bin/bash
-
-# GRUC (Git Repo Update Checker) script. It checks for new commits in any git repos found in any subdirectories including following symlinks of the folder the script is in.
-# If any have new commits, it notifies the user via a desktop notification and includes the names of the folders with the repos, and # of commits behind it is. Can also be passed an argument to automatically update the local clone.
-# Can also be passed an argument to run an existing installer script in the local clone.
+# GRUC (Git Repo Update Checker) - Licensed MIT.
+# Docs at https://github.com/jackmio32/GRUC-script
 
 # TODO: This could likely be done in a much, much less stupid way (especially the parsing of the output from git, which is a giant set of hacky workarounds). I *am* stupid though, so I can't fix it myself: Too bad!
 
@@ -17,7 +15,7 @@ TEMPDEBUG=''
 rm --preserve-root=all --one-file-system ./tempfileneedsupdate ./tempfilestatus ./tempfileallscripts
 
 # sanity checking that all commands used by the script actually exist
-for singlecmd in git find notify-send realpath dirname pwd grep; do # check that the commands that the script uses actually exist, before doing anything.
+for singlecmd in git find notify-send realpath dirname pwd grep pkexec; do # check that the commands that the script uses actually exist, before doing anything.
     if [ ! -z $(command -v "$singlecmd") ]; then
         : # this is the shell equivalent to NOOP, aka do nothing.
     else
