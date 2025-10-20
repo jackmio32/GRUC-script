@@ -1,5 +1,5 @@
 # GRUC-script
-Jack's GRUC (Git Repo Update Checker) script. It checks for new commits in any git repos found in any subdirectories (including following symlinks) of the folder the script is in.
+GRUC (Git Repo Update Checker) script. It checks for new commits in any git repos found in any subdirectories (including following symlinks) of the folder the script is in.
 If any have new commits, it notifies the user via a desktop notification and includes the names of the folders with the repos, and # of commits behind it is.
 
 Setup:
