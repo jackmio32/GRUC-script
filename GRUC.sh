@@ -87,11 +87,11 @@ if [ -z $TEMPDEBUG ]; then # debug feature, so that I don't spam github/gitlab/e
 
 	if [ -s $scriptpath/tempfileneedsupdate ]; then # if the previous for loop found any repos with new commits, and...
 		if [ $pullupdates = '' ]; then # updates are not to be pulled, then...
-			notify-send -a "Jack's GRUC script" 'Local repositories have new commits!' "$(cat ./tempfileneedsupdate)" # ..notify of any repos found to be outdated. includes path relative to script, and num of commits behind.
+			notify-send -a "GRUC script" 'Local repositories have new commits!' "$(cat ./tempfileneedsupdate)" # ..notify of any repos found to be outdated. includes path relative to script, and num of commits behind.
 		elif [ $pullupdates = "true" ]; then
-			notify-send -a "Jack's GRUC script" 'Local repositories were fast-forwarded!' "$(cat ./tempfileneedsupdate)" # notify that repos were updated, with the same info as above.
+			notify-send -a "GRUC script" 'Local repositories were fast-forwarded!' "$(cat ./tempfileneedsupdate)" # notify that repos were updated, with the same info as above.
 		elif [ $recompile = "true" ]; then
-			notify-send -a "Jack's GRUC script" 'Local repositories were fast-forwarded and programs recompiled!' "$(cat ./tempfileneedsupdate)" # notify that repos were updated and install scripts reran, with the same info as above.
+			notify-send -a "GRUC script" 'Local repositories were fast-forwarded and programs recompiled!' "$(cat ./tempfileneedsupdate)" # notify that repos were updated and install scripts reran, with the same info as above.
 		fi
 	fi
 
