@@ -39,10 +39,10 @@ cd $scriptpath
 if [ ! $# -eq 0 ]; then
 	for arg in "$@"
 	do
-		if [ $arg = "--pull" -o $arg = "-P" ]; then
+		if [ $arg = "--update" -o $arg = "-P" ]; then
 			pullupdates=true
 			# echo "Also fast-forwarding repos to be up to date with remote!"
-		elif [ $arg = "--update" -o $arg = "-U" ]; then
+		elif [ $arg = "--upgrade" -o $arg = "-U" ]; then
 			recompile=true
 			# echo "Also running any install scripts found in repos!"
 		fi
