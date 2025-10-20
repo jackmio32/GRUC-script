@@ -8,4 +8,5 @@ For auto-upgrade functionality, also create a script (or symlink to the repo's i
 
 Program arguments:
 --update: Also fast forward local clones to be up to date with remote.
+
 --upgrade: Also run the install scripts for all local clones.
