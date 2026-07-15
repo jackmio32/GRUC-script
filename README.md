@@ -12,4 +12,4 @@ Program arguments:
 
 --update: Also fast forward local clones to be up to date with remote.
 
---upgrade: Also run the install scripts for all local clones.
+--upgrade: Also run the install scripts for all local clones. **WARNING**: THIS FEATURE IS EXPERIMENTAL AT BEST, AND PROBABLY POTENTIALLY HARMFUL IN SOME EDGE CASES. ALSO IT MAY NOT WORK CORRECTLY FOR YOU. USE AT YOUR OWN RISK.
